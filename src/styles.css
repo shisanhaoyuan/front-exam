@@ -110,7 +110,7 @@ button:focus-visible { outline: 3px solid #103f9b; outline-offset: 4px; }
   .desktop-break { display: none; }
 }
 @media (max-width: 1023px) {
-  .onboarding { grid-template-columns: 1fr; gap: 32px; max-width: 760px; padding: 40px 32px; }
+  .onboarding { grid-template-columns: 1fr; align-content: start; gap: 32px; max-width: 760px; padding: 40px 32px; }
   .introduction { min-height: 215px; display: flex; align-items: flex-start; }
   .introduction__copy { width: 65%; padding-top: 8px; }
   .introduction__illustration { left: auto; right: -14px; bottom: -32px; width: 230px; max-width: 36%; }
