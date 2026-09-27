@@ -2,6 +2,9 @@
 
 使用 **HTML5、CSS3 和原生 JavaScript** 还原题目中的简历上传页面。Vite 仅用于本地开发和生产打包，无运行时框架依赖。
 
+- [在线预览](https://shisanhaoyuan.github.io/front-exam/)
+- [GitHub 仓库](https://github.com/shisanhaoyuan/front-exam)
+
 ## 预览
 
 ![桌面端效果](docs/desktop.png)
