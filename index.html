@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7fbf9" />
+    <meta name="description" content="Finish your profile by selecting or dragging in your resume. A responsive resume upload interface." />
+    <title>Upload Your Resume</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <main class="onboarding">
+      <section class="introduction" aria-labelledby="page-title">
+        <div class="introduction__copy">
+          <h1 id="page-title">Finish!<br />Upload Your Resume</h1>
+          <p>Upload your resume, the platform will help you parse and optimize, you can also skip this step</p>
+        </div>
+        <img class="introduction__illustration" src="./assets/resume-illustration.png" alt="" width="580" height="503" fetchpriority="high" />
+      </section>
+
+      <section class="upload-card" aria-labelledby="upload-title">
+        <h2 id="upload-title">Upload file</h2>
+        <form id="resume-form" novalidate>
+          <div class="upload-field">
+            <input class="visually-hidden" id="resume-file" type="file" accept=".pdf,.doc,.docx" aria-label="Choose your resume" aria-describedby="upload-help file-error" />
+            <label class="drop-zone" id="drop-zone" for="resume-file">
+              <svg class="upload-icon" width="54" height="44" viewBox="0 0 54 44" fill="none" aria-hidden="true">
+                <path d="M15 36H42a9 9 0 0 0 0-18h-1A15 15 0 0 0 12 14a11 11 0 0 0 3 22Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round" />
+                <path d="m27 15-9 9h6v9h6v-9h6l-9-9Z" fill="currentColor" />
+              </svg>
+              <span class="drop-zone__prompt" id="upload-help">Drag your resume file to this area, or click on the area to select<br class="desktop-break" /> the appropriate file to upload</span>
+              <span class="selected-file" id="selected-file" hidden>
+                <span class="selected-file__name" id="file-name"></span>
+                <span class="selected-file__detail" id="file-detail"></span>
+                <span class="selected-file__replace">Click or drop a file to replace</span>
+              </span>
+            </label>
+            <div class="file-feedback">
+              <p class="file-error" id="file-error" role="alert"></p>
+              <button class="remove-file" id="remove-file" type="button" hidden>Remove file</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="button button--secondary" id="last-step" type="button">Last step</button>
+            <button class="button button--primary" type="submit">Finish</button>
+          </div>
+
+          <nav class="progress" aria-label="Profile setup progress">
+            <ol class="progress__steps">
+              <li class="progress__step progress__step--complete" aria-label="Step 1, completed"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 8 3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></li>
+              <li class="progress__step progress__step--complete" aria-label="Step 2, completed"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 8 3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></li>
+              <li class="progress__step" aria-label="Step 3, upload resume" aria-current="step">3</li>
+            </ol>
+          </nav>
+          <p class="visually-hidden" id="file-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <dialog class="dialog" id="result-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+      <div class="dialog__icon" aria-hidden="true">✓</div>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <form method="dialog"><button class="button button--primary" id="dialog-close">Back to resume</button></form>
+    </dialog>
+  </body>
+</html>

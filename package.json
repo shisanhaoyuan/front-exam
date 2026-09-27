@@ -1,0 +1,17 @@
+{
+  "name": "resume-upload-design",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A responsive, accessible resume upload page recreated from a supplied design.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "vite": "^8.3.1"
+  }
+}
